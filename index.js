@@ -9,8 +9,8 @@ app.use(express.json());
 
 const PORT = process.env.GATEWAY_PORT || 8000;
 const USER_SERVICE = process.env.USER_SERVICE || "http://localhost:3001";
-const REVIEW_SERVICE = process.env.REVIEW_SERVICE || "http://localhost:3002";
-const GAME_SERVICE = process.env.GAME_SERVICE || "http://localhost:3003";
+const GAME_SERVICE = process.env.GAME_SERVICE || "http://localhost:3002";
+const REVIEW_SERVICE = process.env.REVIEW_SERVICE || "http://localhost:3003";
 const LIKES_SERVICE = process.env.LIKES_SERVICE || "http://localhost:3004";
 
 app.use(
@@ -90,4 +90,6 @@ app.get("/review/:gameId/reviews-with-user", async (req, res) => {
   }
 });
 
-app.listen(PORT, () => console.log(`Gateway running on port: ${PORT}`));
+app.listen(PORT, "0.0.0.0", () =>
+  console.log(`Gateway running on port: ${PORT}`)
+);

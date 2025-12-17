@@ -12,7 +12,10 @@ jobs:
   docker-build-test-push-ecr:
     runs-on: ubuntu-latest
     env:
-      NODE_ENV: test
+      REVIEW_SERVICE_URL: http://localhost:3003
+      CATALOG_SERVICE_URL: http://localhost:3002
+      USER_SERVICE_URL: http://localhost:3001
+      LIKES_SERVICE_URL: http://localhost:3004
     steps:
       # 1. Checkout repo
       - name: Checkout repository

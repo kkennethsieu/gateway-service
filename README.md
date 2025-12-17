@@ -53,7 +53,8 @@ const LIKES_SERVICE = process.env.LIKES_SERVICE || "http://likes-service:7060";
 const USER_SERVICE = process.env.USER_SERVICE || "http://user-service:3000";
 const REVIEW_SERVICE =
   process.env.REVIEW_SERVICE || "http://reviews-service:4000";
-const GAME_SERVICE = process.env.GAME_SERVICE || "http://catalog-service:8000";
+const CATALOG_SERVICE =
+  process.env.CATALOG_SERVICE || "http://catalog-service:8000";
 ```
 
 ## 🔹 API Endpoints
@@ -131,7 +132,7 @@ When running inside Docker, the gateway uses service names for internal communic
 ```javascript
 const USER_SERVICE = process.env.USER_SERVICE || "http://localhost:3001";
 const REVIEW_SERVICE = process.env.REVIEW_SERVICE || "http://localhost:3002";
-const GAME_SERVICE = process.env.GAME_SERVICE || "http://localhost:3003";
+const CATALOG_SERVICE = process.env.CATALOG_SERVICE || "http://localhost:3003";
 const LIKES_SERVICE = process.env.LIKES_SERVICE || "http://localhost:3004";
 ```
 
